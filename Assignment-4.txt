@@ -1,0 +1,86 @@
+                                                                Module -7(jquery Basic , Effects & Advance)
+
+que:1> What is jquery ?
+ans: =>j Query is a fast, small, and feature-rich JavaScript library. It makes things like HTML document traversal and manipulation, 
+         event handling, animation, and Ajax much simpler with an easy-to-use API that works across a multitude of browsers. With a combination of 
+         versatility and extensibility,
+     => jQuery has changed the way that millions of people write JavaScript.
+     => jQuery is a lightweight, "write less, do more", JavaScript library.
+     => The purpose of jQuery is to make it much easier to use JavaScript on your website.
+     => jQuery takes a lot of common tasks that require many lines of JavaScript code to accomplish, and wraps them into methods that you can 
+         call with a single line of code.
+     => jQuery also simplifies a lot of the complicated things from JavaScript, like AJAX calls and DOM manipulation.
+     => The jQuery library contains the following features:
+          * HTML/DOM manipulation
+          * CSS manipulation
+          * HTML event methods
+          * Effects and animations
+          * AJAX
+          * Utilities
+      => There are lots of other JavaScript libraries out there, but jQuery is probably the most popular, and also the most extendable.
+      => Many of the biggest companies on the Web use jQuery, such as:
+          * Google
+          * Microsoft
+          * IBM
+          * Netflix
+
+que:2> How to apply css using jquery? How to add class and Remove class in jquery ?
+ans: => There are many types of CSS methods, which means that each method has the same name but takes different parameters. We will
+          discuss only two methods, one of which is used to change a single CSS property, while the other is used to change multiple CSS properties
+          simultaneously. With the second method, you can pass a JSON string object as a parameter that you want to apply to the HTML element. 
+      =>  here is the syntax to change any the css of any eliment
+          $().css(propertyname, value);
+          $().css(properties);
+       => Add class property :=>
+          As it's name defines its defination this function adds the class in any perticuler eliment.here is the syntex to add the class in any element 
+          using jquery.
+       =>  $( "p" ).addClass( "myClass " ) 
+       => removeclass property;=>
+           This function removes the class in any perticuler eliment. here is the syntex to use this function.
+       =>  $( "p" ).removeClass( "myClass " ) 
+
+que:3> How to creat slider with animation ?
+ans: With jQuery you can create a sliding effect on elements.
+     jQuery has the following slide methods:
+       * slideDown()
+       * slideUp()
+       * slideToggle()
+     => slideDown() :
+         ->The jQuery slideDown() method is used to slide down an element.
+         ->The optional speed parameter specifies the duration of the effect. It can take the following values: "slow", "fast", or milliseconds.
+         ->The optional callback parameter is a function to be executed after the sliding completes.
+         ->The following example demonstrates the slideDown() method:
+         => $("#flip").click(function(){
+               $("#panel").slideDown();
+             });
+
+      => slideUp():
+        -> The jQuery slideUp() method is used to slide up an element.
+        -> The optional speed parameter specifies the duration of the effect. It can take the following values: "slow", "fast", or milliseconds.
+        ->The optional callback parameter is a function to be executed after the sliding completes.
+        ->The following example demonstrates the slideUp() method:
+        => $("#flip").click(function(){
+              $("#panel").slideUp();
+            });
+
+       => slideToggle():
+        -> The jQuery slideToggle() method toggles between the slideDown() and slideUp() methods.
+        -> If the elements have been slid down, slideToggle() will slide them up.
+        -> If the elements have been slid up, slideToggle() will slide them down.
+        -> The optional speed parameter can take the following values: "slow", "fast", milliseconds.
+        -> The optional callback parameter is a function to be executed after the sliding completes.
+        -> The following example demonstrates the slideToggle() method:
+         => $("#flip").click(function(){
+               $("#panel").slideToggle();
+             });
+
+
+
+       
+
+       
+
+
+
+
+  
