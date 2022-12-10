@@ -1,0 +1,71 @@
+                                                         <   Advance javascript:- Module-9 [ Introduction to javascript & Code Quality ]  >
+
+
+que: 1>  Write a program to Show an alert.
+Ans:  code : alert("Hello! I am an alert box!");
+       ->The alert() method displays an alert box with a message and an OK button.
+       ->The alert() method is used when you want information to come through to the user.
+
+que: 2> What will be the result for these expressions?
+         (1) 5>4
+           ans: true
+          (2) "apple" > "pineapple"
+           ans : false
+          (3) "2" > "12"
+           ans : true
+          (4) undefined == null
+           ans : true
+          (5) undefined === null
+           ans : false
+          (6) null == "\n0\n" 
+           ans : false
+          (7) null === +"\n0\n"
+           ans : false
+
+que : 3>Will alert be shown?
+             if ("0") { alert( 'Hello'); }
+ans :  Tt will alert -> "Hello"
+
+que : 4> What is the code below going to output? alert( null || 2 || undefined );
+ans : It will alert -> 2
+
+que :5> Replace Function Expressions with arrow functions in the code below:
+        (1)  Function ask(question, yes, no) {
+           if (confirm(question))yes();
+           else{
+             no();
+              }
+          }
+         (2) ask("Do you agree?", function() {
+             alert("You agreed."); },
+         (3) function() {
+                 alert("You canceled the execution."); }
+              }
+
+
+ans : (1)  const ask = (question , yes ,no) =>{
+        if (confirm(question))yes();
+           else{
+             no();
+              }  
+       }
+      (2) let agree = prompt ("Do you agree ?")
+           const agreed = () =>{
+             if(agree = yes){
+              alert("you agreed !!")
+             }
+          }
+       
+        (3) const disagree = () =>{
+              alert("you canceled the execution");
+              }
+
+
+
+
+
+
+
+ 
+
+
