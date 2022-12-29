@@ -1,0 +1,122 @@
+                                                                      Advance Javascript (Module - 14)
+
+que : 1 > What is JSON?
+ans :  JSON stands for JavaScript Object Notation
+      JSON is a lightweight data interchange format
+      JSON is language independent *
+      JSON is "self-describing" and easy to understand
+     => The JSON syntax is derived from JavaScript object notation syntax, but the JSON format is text only. Code for reading and generating
+         JSON data can be written in any programming language.
+     => JavaScript Object Notation (JSON) is a standard text-based format for representing structured data based on JavaScript object syntax.
+         It is commonly used for transmitting data in web applications (e.g., sending some data from the server to the client, so it can be displayed on 
+          a web page, or vice versa). You'll come across it quite often, so in this article, we give you all you need to work with JSON using JavaScript, 
+         including parsing JSON so you can access data within it, and creating JSON.
+      => JSON is a text-based data format following JavaScript object syntax, which was popularized by Douglas Crockford. Even though it closely
+         resembles JavaScript object literal syntax, it can be used independently from JavaScript, and many programming environments feature the ability 
+         to read (parse) and generate JSON.
+      => JSON exists as a string — useful when you want to transmit data across a network. It needs to be converted to a native JavaScript object when
+         you want to access the data. This is not a big issue — JavaScript provides a global JSON object that has methods available for converting between
+         the two.
+      =>A JSON string can be stored in its own file, which is basically just a text file with an extension of .json, and a MIME type of application/json.
+      => As described above, JSON is a string whose format very much resembles JavaScript object literal format. You can include the same basic data types
+         inside JSON as you can in a standard JavaScript object — strings, numbers, arrays, booleans, and other object literals. This allows you to construct
+         a data hierarchy, like so:
+      =>JSON is purely a string with a specified data format — it contains only properties, no methods.
+      =>JSON requires double quotes to be used around strings and property names. Single quotes are not valid other than surrounding the entire JSON string.
+      =>Even a single misplaced comma or colon can cause a JSON file to go wrong, and not work. You should be careful to validate any data you are
+        attempting to use (although computer-generated JSON is less likely to include errors, as long as the generator program is working correctly).
+          You can validate JSON using an application like JSONLint.
+      =>JSON can actually take the form of any data type that is valid for inclusion inside JSON, not just arrays or objects. So for example, a single string 
+         or number would be valid JSON.
+      =>Unlike in JavaScript code in which object properties may be unquoted, in JSON only quoted strings may be used as properties.
+      => To obtain the JSON, we use an API called Fetch. This API allows us to make network requests to retrieve resources from a server via JavaScript
+          (e.g. images, text, JSON, even HTML snippets), meaning that we can update small sections of content without having to reload the entire page.
+
+que: 2> What is promises?
+ans : =>Promises are used to handle asynchronous operations in JavaScript. They are easy to manage when dealing with multiple asynchronous operations
+       where callbacks can create callback hell leading to unmanageable code. 
+      =>Prior to promises events and callback functions were used but they had limited functionalities and created unmanageable code. 
+      Multiple callback functions would create callback hell that leads to unmanageable code. Also it is not easy for any user to handle multiple callbacks at 
+      the same time.
+      =>Events were not good at handling asynchronous operations.
+      =>Promises are the ideal choice for handling asynchronous operations in the simplest manner. They can handle multiple asynchronous operations easily
+         and provide better error handling than callbacks and events. In other words also, we may say that, promises are the ideal choice for handling 
+         multiple callbacks at the same time, thus avoiding the undesired callback hell situation. Promises do provide a better chance to a user to read the
+         code in a more effective and efficient manner especially it that particular code is used for implementing multiple asynchronous operations. 
+      => Benefits of Promises :=>
+        ->Improves Code Readability
+       ->Better handling of asynchronous operations 
+       ->Better flow of control definition in asynchronous logic
+       -> Better Error Handling
+     => A Promise has four states: 
+        ->fulfilled: Action related to the promise succeeded
+        ->rejected: Action related to the promise failed
+        ->pending: Promise is still pending i.e. not fulfilled or rejected yet
+       ->settled: Promise has fulfilled or rejected
+     => A promise can be created using Promise constructor.
+          Syntax:
+          var promise = new Promise(function(resolve, reject){
+              //do something
+          });
+     => Parameters 
+       Promise constructor takes only one argument which is a callback function (and that callback function is also referred as anonymous function too).
+        Callback function takes two arguments, resolve and reject
+        Perform operations inside the callback function and if everything went well then call resolve.
+        If desired operations do not go well then call reject.
+
+     => Promise Consumers
+       Promises can be consumed by registering functions using .then and .catch methods.
+
+      1. then() 
+      => then() is invoked when a promise is either resolved or rejected. It may also be defined as a carrier which takes data from promise and further 
+       executes it successfully.
+     => Parameters: 
+       then() method takes two functions as parameters. 
+      First function is executed if promise is resolved and a result is received.
+     Second function is executed if promise is rejected and an error is received. (It is optional and there is a better way to handle error using .catch() method
+     => then(function(result){
+        //handle success
+       }, function(error){
+        //handle error
+       })
+      2 ,catch() 
+
+      =>catch() is invoked when a promise is either rejected or some error has occurred in execution. It is used as an Error Handler whenever at any step 
+        there is a chance of getting an error.
+       Parameters: 
+      =>catch() method takes one function as parameter. 
+      =>Function to handle errors or promise rejections.(.catch() method internally calls .then(null, errorHandler), i.e. .catch() is just a shorthand for 
+        .then(null, errorHandler) )
+
+que : 3> Write a program of promises and handle that promises also...
+
+ans  : const myFirstPromise = new Promise((resolve, reject) => {
+  // We call resolve(...) when what we were doing asynchronously was successful, and reject(...) when it failed.
+  // In this example, we use setTimeout(...) to simulate async code.
+  // In reality, you will probably be using something like XHR or an HTML API.
+  setTimeout(() => {
+    resolve("Success!"); // Yay! Everything went well!
+  }, 250);
+});
+
+myFirstPromise.then((successMessage) => {
+  // successMessage is whatever we passed in the resolve(...) function above.
+  // It doesn't have to be a string, but if it is only a succeed message, it probably will be.
+  console.log(`Yay! ${successMessage}`);
+});
+
+que : 4>  Use fetch method for calling an api https://fakestoreapi.com/products
+ans : fetch('https://fakestoreapi.com/products')
+     .then((response) => response.json())
+     .then((data) => console.log(data));
+
+que : 5> Display all the product from the api in your HTML page
+
+
+
+
+
+
+
+
+
