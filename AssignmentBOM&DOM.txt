@@ -1,0 +1,74 @@
+                                                                             Javascript - BOM & DOM
+
+que : 1> What is BOM in javascript?
+ans : BOM stands for Browser Object Model.
+      => It is a browser-specific convention referring to all the objects exposed by the web browser. The BOM allows JavaScript to “interact with” the
+         browser. The object of the window represents a browser window and all its corresponding features. A window object is created automatically 
+         by the browser itself. Java Script’s window.screen object contains information about the user’s screen. It can also be written without the 
+         window prefix. 
+      =>Properties:
+            (1) screen.width
+            (2) screen.height
+            (3) screen.availWidth
+            (4) screen.availHeight
+            (5) screen.colorDepth
+            (6) screen.pixelDepth
+
+          (1)HTML screen.width Property: The screen.width property returns the user’s screen width in pixels. 
+          (2)HTML screen.height Property: The screen.height property returns the users screen height in pixels.
+          (3)HTML screen.availWidth Property: The screen.availWidth property returns the users screen width in pixels, excluding the interface features. 
+          (4)HTML screen.availHeight Property: The screen.availHeight property returns the users screen height in pixels excluding the interface features. 
+          (5)HTML screen.colorDepth Property: The screen.colorDepth property returns the bits (number) to be used to display one color. Usually, 24-bit
+              or 32-bit hardware is used for color resolution. 24 bits = 16, 777, 216 different (True Colors) 32 bits = 4, 294, 967, 296 
+              different (Deep Colors) 
+          (6)HTML screen.pixelDepth Property: The screen.pixelDepth property returns the pixel depth of the screen. 
+
+que : 2> What is DOM in javascript?
+ 
+ans : The Document Object Model (DOM) is a programming interface for web documents. It represents the page so that programs can change the
+      document structure, style, and content. The DOM represents the document as nodes and objects; that way, programming languages can interact 
+       with the page.
+                A web page is a document that can be either displayed in the browser window or as the HTML source. In both cases, it is the same 
+       document but the Document Object Model (DOM) representation allows it to be manipulated. As an object-oriented representation of the web page,
+       it can be modified with a scripting language such as JavaScript.
+                The DOM is not part of the JavaScript language, but is instead a Web API used to build websites. JavaScript can also be used in other
+       contexts. For example, Node.js runs JavaScript programs on a computer, but provides a different set of APIs, and the DOM API is not a core part 
+       of the Node.js runtime.
+                The DOM was designed to be independent of any particular programming language, making the structural representation of the document
+       available from a single, consistent API. Even if most web developers will only use the DOM through JavaScript, implementations of the DOM can be
+       built for any language, as this Python example demonstrates:
+       You don't have to do anything special to begin using the DOM. You use the API directly in JavaScript from within what is called a script, a program
+       run by a browser.
+                As it is generally not recommended to mix the structure of the page (written in HTML) and manipulation of the DOM (written in JavaScript), 
+       the JavaScript parts will be grouped together here, and separated from the HTML.
+                The Document Object Model (DOM) is a programming interface for HTML(HyperText Markup Language) and XML(Extensible markup language)
+        documents. It defines the logical structure of documents and the way a document is accessed and manipulated.
+        Note: It is called a Logical structure because DOM doesn’t specify any relationship between objects. 
+                DOM is a way to represent the webpage in a structured hierarchical way so that it will become easier for programmers and users to
+        glide through the document. With DOM, we can easily access and manipulate tags, IDs, classes, Attributes, or Elements of HTML using commands 
+        or methods provided by the Document object. Using DOM, the JavaScript gets access to HTML as well as CSS of the web page and can also add
+        behavior to the HTML elements. so basically Document Object Model is an API that represents and interacts with HTML or XML documents.
+         =>Why DOM is required?
+              HTML is used to structure the web pages and Javascript is used to add behavior to our web pages. When an HTML file is loaded into the
+        browser, the javascript can not understand the HTML document directly. So, a corresponding document is created(DOM). DOM is basically the
+        representation of the same HTML document but in a different format with the use of objects. Javascript interprets DOM easily i.e javascript can
+        not understand the tags(<h1>H</h1>) in HTML document but can understand object h1 in DOM. Now, Javascript can access each of the objects
+        (h1, p, etc) by using different functions.
+        => Structure of DOM:
+              DOM can be thought of as a Tree or Forest(more than one tree). The term structure model is sometimes used to describe the tree-like
+        representation of a document.  Each branch of the tree ends in a node, and each node contains objects  Event listeners can be added to nodes 
+        and triggered on an occurrence of a given event. One important property of DOM structure models is structural isomorphism: if any two DOM
+        implementations are used to create a representation of the same document, they will create the same structure model, with precisely the same 
+        objects and relationships.
+       => Why called an Object Model?
+          Documents are modeled using objects, and the model includes not only the structure of a document but also the behavior of a document 
+          and the objects of which it is composed like tag elements with attributes in HTML.
+      
+
+
+
+
+
+
+
+
