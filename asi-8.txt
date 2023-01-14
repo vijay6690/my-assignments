@@ -111,10 +111,7 @@ ans : fetch('https://fakestoreapi.com/products')
      .then((data) => console.log(data));
 
 que : 5> Display all the product from the api in your HTML page
-
-
-
-
+ans : 
 
 
 
